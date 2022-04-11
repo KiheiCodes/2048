@@ -215,6 +215,7 @@ public class KeyInput extends KeyAdapter {
 			HUD.board = new int[4][4];
 			Game.setup();
 			HUD.score = 0;
+			HUD.l = false;
 		}
 		// if (key == KeyEvent.VK_Q) System.exit(1);
 		

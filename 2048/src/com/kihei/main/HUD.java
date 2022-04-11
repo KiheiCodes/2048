@@ -60,8 +60,11 @@ public class HUD {
 		
 		if (l) {
 			g.setColor(Color.black);
-			cStr(g, "You lost! Press r to play again.", 0, 290, 800, 800, new Font(g.getFont().getFontName(), Font.PLAIN, 40));
+		} else {
+			g.setColor(new Color(255, 252, 236));
 		}
+		
+		cStr(g, "You lost! Press r to play again.", 0, 290, 800, 800, new Font(g.getFont().getFontName(), Font.PLAIN, 40));
 		
 		g.setColor(Color.black);
 		g.setFont(new Font(g.getFont().getFontName(), Font.PLAIN, 20));
@@ -115,13 +118,13 @@ public class HUD {
 			c = new Color(242, 199, 92);
 			break;
 		case 512:
-			c = new Color(199, 160, 64);
+			c = new Color(242, 192, 61);
 			break;
 		case 1024:
-			c = new Color(198, 157, 48);
+			c = new Color(242, 189, 51);
 			break;
 		case 2048:
-			c = new Color(245, 188, 42);
+			c = new Color(242, 183, 47);
 			break;
 		}
 		
