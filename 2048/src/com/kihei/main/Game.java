@@ -13,14 +13,12 @@ public class Game extends Canvas implements Runnable {
 	private Thread thread;
 	private boolean running = false;
 	
-	private Handler handler;
 	private HUD hud;
 	
 	private final Window w;
 	
 	public Game() {
-		handler = new Handler();
-		this.addKeyListener(new KeyInput(handler));
+		this.addKeyListener(new KeyInput());
 		
 		hud = new HUD();
 		
@@ -115,15 +113,6 @@ public class Game extends Canvas implements Runnable {
 		
 		g.dispose();
 		bs.show();
-	}
-	
-	public static float clamp(float var, float min, float max) {
-		if (var >= max)
-			return var = max;
-		else if (var <= min)
-			return var = min;
-		else
-			return var;
 	}
 	
 	public static int rTile() {

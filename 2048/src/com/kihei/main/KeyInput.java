@@ -6,10 +6,8 @@ import java.util.*;
 
 public class KeyInput extends KeyAdapter {
 	
-	private Handler handler;
-	
-	public KeyInput(Handler handler) {
-		this.handler = handler;
+	public KeyInput() {
+		
 	}
 	
 	public void keyPressed(KeyEvent e) {
