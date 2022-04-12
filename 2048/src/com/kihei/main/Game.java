@@ -33,15 +33,6 @@ public class Game extends Canvas implements Runnable {
 		running = true;
 	}
 	
-	public synchronized void stop() {
-		try {
-			thread.join(); // stopping the thread
-			running = false;
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
 	public static int framesDisplay = 0;
 	
 	public void run() {
@@ -75,24 +66,6 @@ public class Game extends Canvas implements Runnable {
 	
 	private void tick() {
 		hud.tick();
-		
-		BufferStrategy bs = this.getBufferStrategy();
-		if (bs == null) {
-			this.createBufferStrategy(3);
-			return;
-		}
-		
-		Graphics g = bs.getDrawGraphics();
-		
-		g.setColor(new Color(255, 252, 236));
-		g.fillRect(0, 0, WIDTH, HEIGHT);
-		
-		int width = w.frame.getContentPane().getWidth();
-		int height = w.frame.getContentPane().getHeight();
-		hud.render(g, width, height);
-		
-		g.dispose();
-		bs.show();
 	}
 	
 	private void render() {
@@ -109,6 +82,7 @@ public class Game extends Canvas implements Runnable {
 		
 		int width = w.frame.getContentPane().getWidth();
 		int height = w.frame.getContentPane().getHeight();
+		
 		hud.render(g, width, height);
 		
 		g.dispose();
