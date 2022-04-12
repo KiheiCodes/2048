@@ -23,7 +23,7 @@ public class KeyInput extends KeyAdapter {
 		}
 		
 		
-		if (key == KeyEvent.VK_D) {
+		if (key == KeyEvent.VK_D || key == KeyEvent.VK_RIGHT) {
 			for(int r = 0; r < 4; r++) {
 				ArrayList<Integer> nonZeroes = new ArrayList<Integer>();
 				int[] tempRow = new int[4];
@@ -70,7 +70,7 @@ public class KeyInput extends KeyAdapter {
 			checkLoss();
 		}
 		
-		if (key == KeyEvent.VK_A) {
+		if (key == KeyEvent.VK_A || key == KeyEvent.VK_LEFT) {
 			for(int r = 0; r < 4; r++) {
 				ArrayList<Integer> nonZeroes = new ArrayList<Integer>();
 				int[] tempRow = new int[4];
@@ -117,7 +117,7 @@ public class KeyInput extends KeyAdapter {
 			checkLoss();
 		}
 		
-		if (key == KeyEvent.VK_S) {
+		if (key == KeyEvent.VK_S || key == KeyEvent.VK_DOWN) {
 			for(int c = 0; c < 4; c++) {
 				ArrayList<Integer> nonZeroes = new ArrayList<Integer>();
 				int[] tempRow = new int[4];
@@ -164,7 +164,7 @@ public class KeyInput extends KeyAdapter {
 			checkLoss();
 		}
 		
-		if (key == KeyEvent.VK_W) {
+		if (key == KeyEvent.VK_W || key == KeyEvent.VK_UP) {
 			for(int c = 0; c < 4; c++) {
 				ArrayList<Integer> nonZeroes = new ArrayList<Integer>();
 				int[] tempRow = new int[4];
