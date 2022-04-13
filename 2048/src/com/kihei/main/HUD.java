@@ -60,11 +60,8 @@ public class HUD {
 		
 		if (l) {
 			g.setColor(Color.black);
-		} else {
-			g.setColor(new Color(255, 252, 236));
+			cStr(g, "You lost! Press r to play again.", 0, 290, 800, 800, new Font(g.getFont().getFontName(), Font.PLAIN, 40));
 		}
-		
-		cStr(g, "You lost! Press r to play again.", 0, 290, 800, 800, new Font(g.getFont().getFontName(), Font.PLAIN, 40));
 		
 		g.setColor(Color.black);
 		g.setFont(new Font(g.getFont().getFontName(), Font.PLAIN, 20));

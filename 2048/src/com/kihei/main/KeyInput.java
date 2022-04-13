@@ -6,10 +6,6 @@ import java.util.*;
 
 public class KeyInput extends KeyAdapter {
 	
-	public KeyInput() {
-		
-	}
-	
 	public void keyPressed(KeyEvent e) {
 		int key = e.getKeyCode();
 		
@@ -217,10 +213,6 @@ public class KeyInput extends KeyAdapter {
 		}
 		// if (key == KeyEvent.VK_Q) System.exit(1);
 		
-	}
-	
-	public void keyReleased(KeyEvent e) {
-		int key = e.getExtendedKeyCode();
 	}
 	
 	private void nTile(int[][] oB) {
